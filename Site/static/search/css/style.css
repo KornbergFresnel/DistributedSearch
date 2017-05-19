@@ -1,0 +1,22 @@
+body {
+	font-family: arial, sans-serif;
+	font-size: small
+}
+
+#ntp-contents{
+	text-align: -webkit-center;
+}
+
+#logo {
+	/*if you wanna add image resource as css tyle, you need creat image directory under static first*/
+	background-image: url(images/search_logo.svg);
+    background-repeat: no-repeat;
+    height: 92px;
+    margin-bottom: 24px;
+    margin-top: 157px;
+    width: 272px;
+}
+
+#fakebox {
+	position: relative;
+}
