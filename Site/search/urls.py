@@ -19,5 +19,5 @@ from . import views
 app_name = 'search'
 
 urlpatterns = [
-    url(r'^index/$', )
+    url(r'^index/$', views.index, name='main'),
 ]
