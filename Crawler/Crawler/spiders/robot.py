@@ -7,6 +7,7 @@ import queue
 from .. import settings
 from urllib.parse import urlparse
 from ..execute import pretask
+from scrapy import signals
 
 
 class DistributedSpider(scrapy.Spider):
@@ -21,6 +22,12 @@ class DistributedSpider(scrapy.Spider):
         while url_queue.empty() is not True:
             yield scrapy.Request(url=url_queue.get(), callback=self.parse)
 
+    @classmethod
+    def from_crawler(cls, crawler, *args, **kwargs):
+        spider = super(DistributedSpider, cls).from_crawler(crawler, *args, **kwargs)
+        crawler.signals.connect(spider.spider_closed, signal=signals.spider_closed)
+        return spider
+
     def parse(self, response):
         # get current domain url
         domain = pretask.getDomain(response.url)
@@ -34,6 +41,5 @@ class DistributedSpider(scrapy.Spider):
                 'text': ''.join(text)
             }
 
-    def close(self, reason):
-        yield 'This is my Reason'
-        super.close(reason)
+    def spider_closed(self, spider):
+        spider.logger.info('Dspider has been closed!')
