@@ -90,4 +90,4 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 # File used for url storage
-SOTRE_FILE = 'url_storage.txt'
+STORAGE_FILE = 'url_storage.txt'

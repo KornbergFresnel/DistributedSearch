@@ -16,7 +16,7 @@ class DistributedSpider(scrapy.Spider):
 
     def start_requests(self):
         # load start urls from outer files
-        url_list = pretask.getURLS(settings.SOTRE_FILE)
+        url_list = pretask.getURLS(settings.STORAGE_FILE)
         # convert list to queue
         url_queue = pretask.listToQueue(url_list)
         while url_queue.empty() is not True:
@@ -42,4 +42,8 @@ class DistributedSpider(scrapy.Spider):
             }
 
     def spider_closed(self, spider):
+        """Custom closed function
+        this function will be called when spider will be closed, then url_queue will be clean
+        but we need extract data contains in it to url_storage.txt
+        """
         spider.logger.info('Dspider has been closed!')
