@@ -120,3 +120,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# If you wanna let all apps can load static files from root, please set static url as this
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
