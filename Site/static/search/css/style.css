@@ -9,14 +9,15 @@ body {
 
 #logo {
 	/*if you wanna add image resource as css tyle, you need creat image directory under static first*/
-	background-image: url(images/search_logo.svg);
+	background-image: url(../images/search_logo.svg);
     background-repeat: no-repeat;
-    height: 92px;
+    height: 200px;
     margin-bottom: 24px;
     margin-top: 157px;
-    width: 272px;
+    width: 200px;
 }
 
 #fakebox {
+	width: 45%;
 	position: relative;
 }
