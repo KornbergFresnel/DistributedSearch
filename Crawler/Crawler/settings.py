@@ -8,11 +8,16 @@
 #     http://doc.scrapy.org/en/latest/topics/settings.html
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
+import os
+
 
 BOT_NAME = 'Crawler'
 
 SPIDER_MODULES = ['Crawler.spiders']
 NEWSPIDER_MODULE = 'Crawler.spiders'
+
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -91,10 +96,10 @@ ITEM_PIPELINES = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 # File used for url storage
-STORAGE_FILE = 'url_storage.txt'
+STORAGE_FILE = os.path.join(BASE_DIR, 'url_storage.txt')
 
 # File used for crawler storage
-TMP_STORAGE_FILE = 'log/info.log'
+TMP_STORAGE_FILE = os.path.join(BASE_DIR, 'log/info.log')
 
 # Setting depth for our Spider
 DEPTH_LIMIT = 5

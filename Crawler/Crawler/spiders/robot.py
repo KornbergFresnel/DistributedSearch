@@ -50,10 +50,11 @@ class DistributedSpider(scrapy.Spider):
 
         # extract content from current page, just text content
         tmpContent = response.xpath('/html/body//*/text()').extract()
+        item['summary'] = ''
         for ele in tmpContent:
             item['summary'] += ele.strip() + ' '
 
-        yield item  # accepted by pipeline
+        yield item['url'] + ' crawler success, OK!'  # accepted by pipeline
 
         # extract inner urls from current page, in this part, we need focus on some special urls,
         # such as some resource urls.
@@ -62,8 +63,8 @@ class DistributedSpider(scrapy.Spider):
         for url in innerURLS:
             if self.illegal(url):
                 continue
-            if not url.startwith('http://'):
-                url = domain + url
+            if not url.startswith('http://'):
+                url = domain + '/' + url
             yield scrapy.Request(url=url, callback=self.parse)
 
     def spider_closed(self, reason):
@@ -75,7 +76,7 @@ class DistributedSpider(scrapy.Spider):
     def illegal(self, ori_url):
         """If ori_url is not a visitable url, this function will return true
         """
-        return re.match(str=ori_url, pattern=self.filter_pattern1) and re.match(str=ori_url, pattern=self.filter_pattern2)
+        return re.match(string=ori_url, pattern=self.filter_pattern1) is not None or re.match(string=ori_url, pattern=self.filter_pattern2) is not None
 
     def store(self):
         """Store block urls which stoped for depth has over the maximum

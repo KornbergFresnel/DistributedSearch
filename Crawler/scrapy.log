@@ -1,0 +1,467 @@
+2017-05-20 18:30:03 [scrapy.utils.log] INFO: Scrapy 1.3.3 started (bot: Crawler)
+2017-05-20 18:30:03 [scrapy.utils.log] INFO: Overridden settings: {'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.1 Safari/603.1.30', 'DEPTH_PRIORITY': 1, 'ROBOTSTXT_OBEY': True, 'BOT_NAME': 'Crawler', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'LOG_FILE': 'scrapy.log', 'SPIDER_MODULES': ['Crawler.spiders'], 'DEPTH_LIMIT': 1, 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'NEWSPIDER_MODULE': 'Crawler.spiders'}
+2017-05-20 18:30:03 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.corestats.CoreStats']
+2017-05-20 18:30:03 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-05-20 18:30:03 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-05-20 18:30:03 [scrapy.middleware] INFO: Enabled item pipelines:
+['Crawler.pipelines.CrawlerPipeline']
+2017-05-20 18:30:03 [scrapy.core.engine] INFO: Spider opened
+2017-05-20 18:30:03 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-05-20 18:30:03 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-05-20 18:30:03 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/robots.txt> (referer: None)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://jwc.scu.edu.cn/jwc/frontPage.action> (referer: None)
+2017-05-20 18:30:04 [scrapy.core.scraper] ERROR: Spider must return Request, BaseItem, dict or None, got 'str' in <GET http://jwc.scu.edu.cn/jwc/frontPage.action>
+2017-05-20 18:30:04 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET http://jwc.scu.edu.cn/> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/frontPage.action> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=1> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=5> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=6> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=7> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3893> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=4> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=3> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=2> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3864> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3888> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3842> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3900> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3901> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3902> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3903> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3899> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3898> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3896> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3897> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=203> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3895> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (meta refresh) to <GET http://jwc.scu.edu.cn/jwc/frontPage.action> from <GET http://jwc.scu.edu.cn/>
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=204> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=207> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=205> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=206> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/xiaoche.htm> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=91> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=95> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=96> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=98> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=93> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=99> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=92> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=97> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=94> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3825> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3828> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3877> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3677> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/frontPage.action>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3673> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3725> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3722> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3698> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3672> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3676> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3657> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=1>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=5>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=6>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=7>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=12> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=283> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsShow.action?news.id=3643> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3893>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=4>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=3>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=2>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3864>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=266> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=267> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/mailto:jwc@scu.edu.cn> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=264> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=265> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3888>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3842>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3900>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3901>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3902>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3903>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3899>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3898>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3896>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=268> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=269> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=270> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3897>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=203>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3895>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=204>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=207>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=205>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=206>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/xiaoche.htm>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=91>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=95>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=96>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=98>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=93>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=99>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=92>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=97>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=94>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3825>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3828>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3877>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=284> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/moreNotice.action> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/moreNews.action> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/international> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3677>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3673>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3725>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3722>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3698>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3672>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3676>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3657>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=12>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=283>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsShow.action?news.id=3643>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=253> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=254> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://jwc.scu.edu.cn/jwc/xk/xsxk.html> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=255> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=266>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=267>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/mailto:jwc@scu.edu.cn>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=264>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=265>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=256> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=257> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://202.115.47.141/robots.txt> (referer: None)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/wyz/> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=268>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=269>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=270>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://jwc.scu.edu.cn/jwc/newsListShow.action?newsClass.id=309> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=284>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/moreNotice.action>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/moreNews.action>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/international>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://jwc.scu.edu.cn/jwc/newsShow.action?news.id=373> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=8> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=9> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://202.115.47.141/loginAction.do?ifDddl=true&dlfs=mh&ldap=ldap> from <GET http://202.115.47.141>
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=10> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=253>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=254>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.core.scraper] ERROR: Spider must return Request, BaseItem, dict or None, got 'str' in <GET http://jwc.scu.edu.cn/jwc/xk/xsxk.html>
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/xsxk.files/filelist.xml 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/xsxk.files/editdata.mso 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/jwc/newsShow.action?news.id=3675 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/eng.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/whsz.htm 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://202.115.47.141 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.meinvtk.com/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.0463.net/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.0463.net/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.3764.net/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.52yiren.com.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=255>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://jwc.scu.edu.cn/jwc/newsShow.action?news.id=3245> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://cc.scu.edu.cn/robots.txt> (referer: None)
+2017-05-20 18:30:04 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://202.115.47.141/loginAction.do?ifDddl=true&dlfs=mh&ldap=ldap> (failed 1 times): 500 Internal Server Error
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=256>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=257>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://cc.scu.edu.cn> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/wyz/>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://drc.scu.edu.cn/robots.txt> (referer: None)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://metc.scu.edu.cn/robots.txt> (referer: None)
+2017-05-20 18:30:04 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://202.115.47.141/loginAction.do?ifDddl=true&dlfs=mh&ldap=ldap> (failed 2 times): 500 Internal Server Error
+2017-05-20 18:30:04 [scrapy.core.scraper] ERROR: Spider must return Request, BaseItem, dict or None, got 'str' in <GET http://jwc.scu.edu.cn/jwc/newsListShow.action?newsClass.id=309>
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/frontPage.action 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=1 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=2 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=3 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=4 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=5 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=6 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=7 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=339 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=310 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=311 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=312 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=313 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=314 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=315 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=316 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=317 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=318 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=319 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=320 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=321 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=322 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=323 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=324 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=325 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=326 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=327 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=328 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=329 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=330 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=331 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=332 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=333 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=334 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=335 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=336 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=337 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=371 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/frontPage.action 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=8 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=309 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsShow.action?news.id=3832 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsShow.action?news.id=3833 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsShow.action?news.id=3805 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsShow.action?news.id=3806 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsShow.action?news.id=3807 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsShow.action?news.id=3808 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsShow.action?news.id=3809 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsShow.action?news.id=3810 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsShow.action?news.id=3811 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsShow.action?news.id=3812 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://202.115.47.141/loginAction.do?ifDddl=true&dlfs=mh&ldap=ldap> (failed 3 times): 500 Internal Server Error
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (500) <GET http://202.115.47.141/loginAction.do?ifDddl=true&dlfs=mh&ldap=ldap> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.scraper] ERROR: Spider must return Request, BaseItem, dict or None, got 'str' in <GET http://jwc.scu.edu.cn/jwc/newsShow.action?news.id=373>
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/frontPage.action 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=1 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=2 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=3 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=4 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=5 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=6 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=7 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=8>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=9>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=10>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.core.scraper] ERROR: Spider must return Request, BaseItem, dict or None, got 'str' in <GET http://jwc.scu.edu.cn/jwc/newsShow.action?news.id=3245>
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/frontPage.action 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=1 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=2 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=3 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=4 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=5 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=6 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/newsListShow.action?newsClass.id=7 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.core.scraper] ERROR: Spider must return Request, BaseItem, dict or None, got 'str' in <GET http://cc.scu.edu.cn>
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://metc.scu.edu.cn> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://drc.scu.edu.cn/> (referer: http://jwc.scu.edu.cn/jwc/frontPage.action)
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <500 http://202.115.47.141/loginAction.do?ifDddl=true&dlfs=mh&ldap=ldap>: HTTP status code is not handled or not allowed
+2017-05-20 18:30:04 [scrapy.core.scraper] ERROR: Spider must return Request, BaseItem, dict or None, got 'str' in <GET http://metc.scu.edu.cn>
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn// 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/about 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/about/info 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/about/institutional-settings 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn/index.php/main/web/rules-regulations 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/about/download 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/about/contant 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/quality-course 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/quality-course/video-open-class 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/quality-course/resource-sharing-lessons 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/quality-course/micro-lesson 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/multimedia-classrooms 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/environment 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/environment/steering-platform 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/environment/control-system 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/environment/electronic-examination 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/environment/foreign-language-testing-system 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/research 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/research/voting-machine-promotion 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/branch-construction 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/branch-construction/zbjs 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/branch-construction/staff-home 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/branch-construction/xxyd 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/branch-construction/party-movement 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/branch-construction/trade-union-activities 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://cc.scu.edu.cn/G2S/Template/View.aspx?action=view&courseType=0&courseId=1879 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn/index.php/main/web/information/detail/i/517 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn/index.php/main/web/information/detail/i/518 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn/index.php/main/web/information/detail/i/560 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn/index.php/main/web/information/detail/i/563 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/jxhdxt 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/interactive-teaching-system 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/jpzygxksb 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/dmtjsgl 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://jwc.scu.edu.cn/jwc/frontPage.action 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://keti.scxxt.com.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.china.com.cn/chinese/zhuanti/144503.htm 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.etc.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/information 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/information/detail/i/575 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/information/detail/i/574 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/information/detail/i/573 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/information/detail/i/572 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/information/detail/i/571 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/information/detail/i/568 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/information/detail/i/567 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/information/detail/i/566 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/service-guide 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/faq 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/service-guide/detail/i/62 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/service-guide/detail/i/61 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/service-guide/detail/i/60 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/faq/detail/i/65 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/rules-regulations 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/about/download 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/rules-regulations/detail/i/57 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/rules-regulations/detail/i/56 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/rules-regulations/detail/i/55 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/rules-regulations/detail/i/54 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://cc.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn/resources/resources.php 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/multimedia-classrooms 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://cc.scu.edu.cn/g2s/ocw/cn/index.htm 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn/booking/booking.php 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn/booking/booking.php 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn/jxsblycxxt/query.php 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn/jxsblycxxt/query.php 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn/cir.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn/cir.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/ksfwtd/spfw 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/ksfwtd/spfw 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/ksfwtd/kczx 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/ksfwtd/kczx 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/ksfwtd/jxhdxt 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/ksfwtd/jxhdxt 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://metc.scu.edu.cn//index.php/main/web/about/contant 
+2017-05-20 18:30:04 [scrapy.core.scraper] ERROR: Spider must return Request, BaseItem, dict or None, got 'str' in <GET http://drc.scu.edu.cn/>
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://drc.scu.edu.cn//about-2.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://drc.scu.edu.cn//about-3.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://weibo.com/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://drc.scu.edu.cn//news/new-404.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://drc.scu.edu.cn//news/newclass-198.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://drc.scu.edu.cn//news/new-1413.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://drc.scu.edu.cn//news/new-1412.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://drc.scu.edu.cn//news/new-1410.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://drc.scu.edu.cn//news/new-1397.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://drc.scu.edu.cn//news/new-1395.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://drc.scu.edu.cn//news/new-1396.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://drc.scu.edu.cn//news/new-1391.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://drc.scu.edu.cn//news/new-1390.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://drc.scu.edu.cn//news/new-1389.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://drc.scu.edu.cn//news/new-1378.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://drc.scu.edu.cn//news/new-1377.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://drc.scu.edu.cn//news/new-1376.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://drc.scu.edu.cn//about-19-79.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.moe.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.cnier.ac.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://ihe.xmu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://gse.sjtu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.umich.edu/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.pku.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.harvard.edu/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.tsinghua.edu.cn/publish/th/index.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.scu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.umich.edu/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.pku.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.harvard.edu/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.tsinghua.edu.cn/publish/th/index.html 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.berkeley.edu/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.stanford.edu/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.fudan.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.mit.edu/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.cam.ac.uk/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.caltech.edu/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.princeton.edu/main/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.nju.edu.cn/cps/site/newweb/foreground/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.columbia.edu/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.sjtu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.uchicago.edu/index.shtml 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.ustc.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.ox.ac.uk/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.zju.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.yale.edu/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.sdu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.cornell.edu/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.sysu.edu.cn/2010/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.asu.edu/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.uestc.edu.cn/web3/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.swjtu.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.swufe.edu.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://www.sicau.edu.cn/2009/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://edu.163.com/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://edu.sina.com.cn/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://learning.sohu.com/ 
+2017-05-20 18:30:04 [scrapy.spidermiddlewares.depth] DEBUG: Ignoring link (depth > 1): http://edu.qq.com/ 
+2017-05-20 18:30:56 [scrapy.crawler] INFO: Received SIG_UNBLOCK, shutting down gracefully. Send again to force 
+2017-05-20 18:30:56 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2017-05-20 18:31:00 [scrapy.crawler] INFO: Received SIG_UNBLOCK twice, forcing unclean shutdown
+2017-05-20 18:31:00 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://cta.scu.edu.cn/robots.txt> (failed 1 times): An error occurred while connecting: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+].
+2017-05-20 18:31:00 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://202.115.47.189/robots.txt> (failed 1 times): An error occurred while connecting: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+].
