@@ -27,9 +27,9 @@
         <div id="ntp-contents">
             <div id="logo" title="Distributed Search"></div>
             <div id="fakebox">
-                <form action="{% url 'search:main' %}" method="get">
+                <form method="get">
                     <div class="input-group">
-                        {{ form.requery_text }}
+                        {{ form.q }}
                         <span class="input-group-btn">
                             <input id="search-button" class="btn btn-default" type="submit" value="Search"/>
                         </span>
@@ -37,26 +37,5 @@
                 </form>
             </div>
         </div>
-        <script>
-            // $("#search-button").on('click', function(){
-            //     var query_text = $('#query').val();
-            //     $.ajax({
-            //         url: '/search/',
-            //         data: {
-            //             'q': query_text
-            //         },
-            //         success: function(data) {
-            //             console.log(data);
-            //             if (data.success == "1") {
-            //                 console.log(data.url);
-            //                 window.location(data.url);
-            //             } else {
-            //                 console.log(data.url);
-            //                 window.location('/search/');
-            //             }
-            //         }
-            //     });
-            // });
-        </script>
     </body>
 </html>
