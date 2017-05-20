@@ -4,15 +4,20 @@ This file designs a spider for search-engine
 """
 import scrapy
 import queue
+import re
 from .. import settings
 from urllib.parse import urlparse
 from ..execute import pretask
 from scrapy import signals
+from scrapy.selector import HtmlXPathSelector
+from items import CrawlerItem
 
 
 class DistributedSpider(scrapy.Spider):
     name = 'dspider'
     url_queue = queue.Queue()
+    filter_pattern1 = re.compile(pattern='.+\.((jpg)|(ico)|(rar)|(zip)|(doc)|(ppt)|(xls)|(css)|(exe)|(pdf))x?$')
+    filter_pattern2 = re.compile(pattern='^((javascript:)|(openapi)).+')
 
     def start_requests(self):
         # load start urls from outer files
@@ -22,28 +27,30 @@ class DistributedSpider(scrapy.Spider):
         while url_queue.empty() is not True:
             yield scrapy.Request(url=url_queue.get(), callback=self.parse)
 
-    @classmethod
-    def from_crawler(cls, crawler, *args, **kwargs):
-        spider = super(DistributedSpider, cls).from_crawler(crawler, *args, **kwargs)
-        crawler.signals.connect(spider.spider_closed, signal=signals.spider_closed)
-        return spider
-
     def parse(self, response):
         # get current domain url
         domain = pretask.getDomain(response.url)
-        # extract all non-media href from current page
-        link_selectors = response.css('a')
-        for selector in link_selectors:
-            href = selector.css('a::attr(href)').extract_first()
-            text = selector.css('a *::text').extract()
-            yield {
-                'link': href,
-                'text': ''.join(text)
-            }
+        item = CrawlerItem()
+        item['url'] = response.url
+        item['title'] = response.xpath('/html/head/title/text()').exract_first()
 
-    def spider_closed(self, spider):
-        """Custom closed function
-        this function will be called when spider will be closed, then url_queue will be clean
-        but we need extract data contains in it to url_storage.txt
-        """
-        spider.logger.info('Dspider has been closed!')
+        # extract content from current page, just text content
+        tmpContent = response.xpath('/html/body//*/text()').extract()
+        for ele in tmpContent:
+            item['summary'] += ele.strip() + ' '
+
+        yield item  # accepted by pipeline
+
+        # extract inner urls from current page, in this part, we need focus on some special urls,
+        # such as some resource urls.
+        # another problem: some urls maybe relative
+        innerURLS = response.xpath('//@href').extract()
+        for url in innerURLS:
+            if self.illegal(url):
+                continue
+            if not url.startwith('http://'):
+                url = domain + url
+            yield scrapy.Request(url=url, callback=self.parse)
+
+    def illegal(self, ori_url):
+        return re.match(str=ori_url, pattern=self.filter_pattern1) and re.match(str=ori_url, pattern=self.filter_pattern2)

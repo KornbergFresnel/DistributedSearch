@@ -92,3 +92,11 @@ ITEM_PIPELINES = {
 
 # File used for url storage
 STORAGE_FILE = 'url_storage.txt'
+
+# Setting depth for our Spider
+DEPTH_LIMIT = 5
+
+# If we wanna crawl in BFO oder, make setting like these
+DEPTH_PRIORITY = 1
+SCHEDULER_DISK_QUEUE = 'scrapy.squeues.PickleFifoDiskQueue'
+SCHEDULER_MEMORY_QUEUE = 'scrapy.squeues.FifoMemoryQueue'
