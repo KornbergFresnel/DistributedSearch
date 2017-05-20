@@ -13,11 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url, include
+from django.conf.urls import url
 from . import views
 
 app_name = 'search'
 
 urlpatterns = [
-    url(r'^index/$', views.index, name='main'),
+    url(r'^$', views.index, name='main'),    # main page
+    url(r'^result/(?P<requery_text>\w+)$', views.result, name='sresult'),    # display searching result
 ]
