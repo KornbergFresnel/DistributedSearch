@@ -14,7 +14,11 @@
         <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        
+        <script type="text/javascript">
+            // $.ajaxSetup({
+            //     data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
+            // });
+        </script>
     </head>
     <body style="background: rgb(255, 255, 255);">
         <!--[if lt IE 7]>
@@ -23,13 +27,36 @@
         <div id="ntp-contents">
             <div id="logo" title="Distributed Search"></div>
             <div id="fakebox">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search text or href">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">Search</button>
-                    </span>
-                </div>
+                <form action="{% url 'search:main' %}" method="get">
+                    <div class="input-group">
+                        {{ form.requery_text }}
+                        <span class="input-group-btn">
+                            <input id="search-button" class="btn btn-default" type="submit" value="Search"/>
+                        </span>
+                    </div>
+                </form>
             </div>
         </div>
+        <script>
+            // $("#search-button").on('click', function(){
+            //     var query_text = $('#query').val();
+            //     $.ajax({
+            //         url: '/search/',
+            //         data: {
+            //             'q': query_text
+            //         },
+            //         success: function(data) {
+            //             console.log(data);
+            //             if (data.success == "1") {
+            //                 console.log(data.url);
+            //                 window.location(data.url);
+            //             } else {
+            //                 console.log(data.url);
+            //                 window.location('/search/');
+            //             }
+            //         }
+            //     });
+            // });
+        </script>
     </body>
 </html>
