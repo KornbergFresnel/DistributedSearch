@@ -15,7 +15,6 @@ from ..items import CrawlerItem
 
 class DistributedSpider(scrapy.Spider):
     name = 'dspider'
-    url_queue = queue.Queue()
     filter_pattern1 = re.compile(pattern='.+\.((jpg)|(ico)|(rar)|(zip)|(doc)|(ppt)|(xls)|(css)|(exe)|(pdf))x?$')
     filter_pattern2 = re.compile(pattern='^((javascript:)|(openapi)).+')
     BLOCK_URLS = ""
@@ -47,7 +46,7 @@ class DistributedSpider(scrapy.Spider):
         domain = pretask.getDomain(response.url)
         item = CrawlerItem()
         item['url'] = response.url
-        item['title'] = response.xpath('/html/head/title/text()').exract_first()
+        item['title'] = response.xpath('/html/head/title/text()').extract_first()
 
         # extract content from current page, just text content
         tmpContent = response.xpath('/html/body//*/text()').extract()
