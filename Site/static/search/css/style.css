@@ -9,7 +9,7 @@ body {
 
 #logo {
 	/*if you wanna add image resource as css tyle, you need creat image directory under static first*/
-	background-image: url(../images/search_logo.svg);
+	background-image: url(../images/dis_search_200.svg);
     background-repeat: no-repeat;
     height: 200px;
     margin-bottom: 24px;
@@ -20,4 +20,34 @@ body {
 #fakebox {
 	width: 45%;
 	position: relative;
+}
+
+#searchform {
+	margin-top: 24px;
+}
+
+#result-logo {
+	background-image: url(../images/dis_search_64.svg);
+	background-repeat: no-repeat;
+	height: 64px;
+	margin: 12px 0 0 48px;
+}
+
+.result-header {
+	background: #fafafa;
+	padding-bottom: 1em;
+	box-shadow: 2px 0 5px #888888;
+}
+
+.result-panel {
+	margin-top: 12px;
+}
+
+.result-item {
+	/*background: #ffffff;*/
+	/*box-shadow: 2px 2px 5px #888888;
+	border-radius: 4px;*/
+	margin-top: 10px;
+	padding-right: 1em;
+	padding-left: 1em;
 }
