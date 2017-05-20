@@ -12,7 +12,7 @@
 import json
 from scrapy import signals
 from pybloomfilter import BloomFilter
-from .. import settings
+from . import settings
 from scrapy.exceptions import DropItem
 
 
