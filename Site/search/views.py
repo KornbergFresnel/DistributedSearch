@@ -17,7 +17,7 @@ def index(request):
         if form.is_valid():
             query = form.cleaned_data['q']
             context = []
-            return render(request, 'search/result.html', {'context': context})
+            return render(request, 'search/result.html', {'context': context, 'form': form})
     else:
         form = SearchForm()
     return render(request, 'search/index.html', {'form': form})
