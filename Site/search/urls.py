@@ -20,5 +20,4 @@ app_name = 'search'
 
 urlpatterns = [
     url(r'^$', views.index, name='main'),    # main page
-    url(r'^result/(?P<requery_text>\w+)$', views.result, name='sresult'),    # display searching result
 ]
