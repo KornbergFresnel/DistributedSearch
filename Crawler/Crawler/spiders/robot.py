@@ -29,7 +29,7 @@ class DistributedSpider(scrapy.Spider):
             yield scrapy.Request(url=url_queue.get(), callback=self.parse)
 
     @classmethod
-    def from_crawler(self, crawler, *args, **kwargs):
+    def from_crawler(cls, crawler, *args, **kwargs):
         spider = super(DistributedSpider, cls).from_crawler(crawler, *args, **kwargs)
         crawler.signals.connect(spider.spider_closed, signal=signals.spider_closed)
         return spider
@@ -71,7 +71,7 @@ class DistributedSpider(scrapy.Spider):
     def spider_closed(self, reason):
         # store before we close our spider completely
         self.store()
-        spider.logger.info('%s data has been store!!!' % len(self.BLOCK_URLS))
+        self.logger.info('%s data has been store!!!' % len(self.BLOCK_URLS))
 
     def illegal(self, ori_url):
         """If ori_url is not a visitable url, this function will return true
