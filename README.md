@@ -13,3 +13,6 @@
 I proposed a naive method (so that we can advance it in the future):
 1. using BFS algorithm to walk through our links
 2. records the maximum number of sites to visit, or the search's maximum depth (links to links to links)
+
+**Begin crawl with last URLS which had not been visited last time**: as what we think, some URLS had not been visited last time for we terminating them on purpose,
+	so we need store them in a file and extract them from file when we start our crawl task next time
