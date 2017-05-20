@@ -20,15 +20,17 @@ class CrawlerPipeline(object):
     def __init__(self):
         """Initialize the BloomFilter tool
         """
-        self.filter = BloomFilter(100000000, 0.01, 'filter.bloom')
+        # self.filter = BloomFilter(100000000, 0.01, 'filter.bloom')
         self.storage = open(settings.TMP_STORAGE_FILE, 'w')
 
     def process_item(self, item, spider):
-        if self.filter.add(item['url']):
-            raise DropItem("Duplicated item founded: %s" % item['url'])
-        else:
-            self.storage.write(str(item) + '\n')
-            return item
+        # if self.filter.add(item['url']):
+        #     raise DropItem("Duplicated item founded: %s" % item['url'])
+        # else:
+        #     self.storage.write(str(item) + '\n')
+        #     return item
+        self.storage.writes(str(item) + '\n')
+        return item
 
     def __del__(self):
         self.storage.close()

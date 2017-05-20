@@ -24,9 +24,8 @@ class DistributedSpider(scrapy.Spider):
         # load start urls from outer files
         url_list = pretask.getURLS(settings.STORAGE_FILE)
         # convert list to queue
-        url_queue = pretask.listToQueue(url_list)
-        while url_queue.empty() is not True:
-            yield scrapy.Request(url=url_queue.get(), callback=self.parse)
+        for url in url_list:
+            yield scrapy.Request(url=url, callback=self.parse)
 
     @classmethod
     def from_crawler(cls, crawler, *args, **kwargs):
@@ -70,7 +69,8 @@ class DistributedSpider(scrapy.Spider):
 
     def spider_closed(self, reason):
         # store before we close our spider completely
-        self.store()
+        if self.BLOCK_URLS != '':
+            self.store()
         self.logger.info('%s data has been store!!!' % len(self.BLOCK_URLS))
 
     def illegal(self, ori_url):
