@@ -93,6 +93,9 @@ ITEM_PIPELINES = {
 # File used for url storage
 STORAGE_FILE = 'url_storage.txt'
 
+# File used for crawler storage
+TMP_STORAGE_FILE = 'log/info.log'
+
 # Setting depth for our Spider
 DEPTH_LIMIT = 5
 
