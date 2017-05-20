@@ -10,7 +10,7 @@ from urllib.parse import urlparse
 from ..execute import pretask
 from scrapy import signals
 from scrapy.selector import HtmlXPathSelector
-from items import CrawlerItem
+from ..items import CrawlerItem
 
 
 class DistributedSpider(scrapy.Spider):
