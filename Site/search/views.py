@@ -16,7 +16,7 @@ def index(request):
         form = SearchForm(request.GET)
         if form.is_valid():
             query = form.cleaned_data['q']
-            context = []
+            context = SearchItem.objects.all()
             return render(request, 'search/result.html', {'context': context, 'form': form})
     else:
         form = SearchForm()
