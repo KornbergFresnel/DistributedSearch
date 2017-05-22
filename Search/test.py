@@ -1,6 +1,7 @@
 from pyes import *
 from search import *
 
+
 class test:
     def __init__(self):
         self.s = search()
@@ -16,7 +17,6 @@ class test:
             print(i.title)
             print(i.content)
             print(i.url)
-
 
     def test_set(self):
         test_list = []
