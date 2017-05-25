@@ -15,7 +15,7 @@ from ..items import CrawlerItem
 
 class DistributedSpider(scrapy.Spider):
     name = 'dspider'
-    filter_pattern1 = re.compile(pattern='.+\.((jpg)|(ico)|(rar)|(zip)|(doc)|(ppt)|(xls)|(css)|(exe)|(pdf))x?$')
+    filter_pattern1 = re.compile(pattern='.+\.((jpg)|(ico)|(rar)|(zip)|(doc)|(ppt)|(xls)|(css)|(exe)|(pdf)|(gif))x?$')
     filter_pattern2 = re.compile(pattern='^((javascript:)|(openapi)).+')
     BLOCK_URLS = ""
 
@@ -54,7 +54,7 @@ class DistributedSpider(scrapy.Spider):
         for ele in tmpContent:
             item['summary'] += ele.strip() + ' '
 
-        yield item['url'] + ' crawler success, OK!'  # accepted by pipeline
+        yield "Current depth: " + str(response.meta['depth'])
 
         # extract inner urls from current page, in this part, we need focus on some special urls,
         # such as some resource urls.

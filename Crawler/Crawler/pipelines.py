@@ -14,6 +14,7 @@ from scrapy import signals
 from pybloomfilter import BloomFilter
 from . import settings
 from scrapy.exceptions import DropItem
+from ../../../Search import search
 
 
 class CrawlerPipeline(object):
