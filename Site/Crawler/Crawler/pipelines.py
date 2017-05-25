@@ -14,7 +14,7 @@ from scrapy import signals
 from pybloomfilter import BloomFilter
 from . import settings
 from scrapy.exceptions import DropItem
-from ../../../Search import search
+from ..Search import search
 
 
 class CrawlerPipeline(object):
@@ -23,6 +23,8 @@ class CrawlerPipeline(object):
         """
         # self.filter = BloomFilter(100000000, 0.01, 'filter.bloom')
         self.storage = open(settings.TMP_STORAGE_FILE, 'w')
+        self.searchIndex = search.SearchIndex()
+        self.searchIndex.init_mapping()
 
     def process_item(self, item, spider):
         # if self.filter.add(item['url']):
@@ -31,6 +33,7 @@ class CrawlerPipeline(object):
         #     self.storage.write(str(item) + '\n')
         #     return item
         self.storage.writes(str(item) + '\n')
+        self.searchIndex.add_item(item)
         return item
 
     def __del__(self):

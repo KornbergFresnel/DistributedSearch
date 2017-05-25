@@ -7,7 +7,7 @@ DOC_TYPE = "search_engine"
 PAGE_SIZE = 15
 
 
-class search:
+class SearchIndex:
     def __init__(self):
         self.conn = ES('xulight.cn:9200')   # Use HTTP
 
@@ -97,25 +97,17 @@ class Item:
         self.url = None
 
 
-
-
-
-#    s = Search(query,f,)
-
+# s = Search(query,f,)
 # example of some query type
 def query_demo(self):
-    conn = ES("xulight.cn:9200",timeout=20)
+    conn = ES("xulight.cn:9200", timeout=20)
     # term query, for numbers, booleans and dates or text
     # it works very fast without calculating the relevant rate
     # it's a kind of accurate query
-    tq = TermQuery("field","value","boost")
+    tq = TermQuery("field", "value", "boost")
 
     # bool query, filter the data with these rules.
     # must means the rules must be followed completely
     # must_not means the rules must not be followed completely
     # should means one or more than one of the rulse must be followed.
-    bq = BoolQuery("must","most_not","should","boost")
-
-
-   
-
+    bq = BoolQuery("must", "most_not", "should", "boost")
