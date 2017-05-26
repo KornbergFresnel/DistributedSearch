@@ -6,6 +6,7 @@ from .forms import SearchForm
 from .models import SearchItem
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
+import Crawler.Crawler.Search.search as Search
 import json
 
 
@@ -21,3 +22,8 @@ def index(request):
     else:
         form = SearchForm()
     return render(request, 'search/index.html', {'form': form})
+
+
+def search(request):
+    """Handling search request
+    """
