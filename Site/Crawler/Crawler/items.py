@@ -13,4 +13,4 @@ class CrawlerItem(scrapy.Item):
     # name = scrapy.Field()
     url = scrapy.Field()
     title = scrapy.Field()
-    summary = scrapy.Field()
+    content = scrapy.Field()

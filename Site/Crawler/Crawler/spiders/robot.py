@@ -50,9 +50,9 @@ class DistributedSpider(scrapy.Spider):
 
         # extract content from current page, just text content
         tmpContent = response.xpath('/html/body//*/text()').extract()
-        item['summary'] = ''
+        item['content'] = ''
         for ele in tmpContent:
-            item['summary'] += ele.strip() + ' '
+            item['content'] += ele.strip() + ' '
 
         yield "Current depth: " + str(response.meta['depth'])
 
