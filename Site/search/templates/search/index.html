@@ -27,9 +27,9 @@
         <div id="ntp-contents">
             <div id="logo" title="Distributed Search"></div>
             <div id="fakebox">
-                <form method="get">
+                <form method="get" action="{% url 'search:result' %}">
                     <div class="input-group">
-                        {{ form.q }}
+                        <input type="text" name="q" placeholder="Search text or href" class="form-control" />
                         <span class="input-group-btn">
                             <input id="search-button" class="btn btn-default" type="submit" value="Search"/>
                         </span>

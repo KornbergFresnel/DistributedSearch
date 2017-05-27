@@ -24,9 +24,9 @@
                 <div id="result-logo" class="col-md-1">
                 </div>
                 <div id="searchform" class="col-md-5">
-                    <form method="get">
+                    <form method="get" action="{% url 'search:result' %}">
                         <div class="input-group">
-                            {{ form.q }}
+                            <input type="text" name="q" class="form-control" value="{{ query }}"/>
                             <span class="input-group-btn">
                                 <input type="submit" class="btn btn-default" value="Search">
                             </span>
@@ -38,23 +38,17 @@
         <div class="container_fluid result-panel">
             <div class="row">
                 <div class="result-list col-md-6 col-md-offset-1">
-                    <div class="result-item">
-                        <h3><a href="http://www.baidu.com">百度</a></h3>
-                        <span>http://www.baidu.com</span>
-                        <p class="result-item-summary">百度公司是一家主要经营搜索引擎服务的互联网公司，于2000年1月1日由李彦宏、徐勇两人创立于北京中关村。名称中的“百度”二字源自中国南宋词人辛弃疾的《青玉案·元夕》的一句词：“众里寻他千百度，蓦然回首，那人却在，灯火阑珊处”，企业标志则是一个“熊掌”，来自于“猎人以熊掌来寻迹”的意象。</p>
-                    </div>
-                    <div class="result-item">
-                        <h3><a href="http://www.baidu.com">百度</a></h3>
-                        <span>http://www.baidu.com</span>
-                        <p class="result-item-summary">百度公司是一家主要经营搜索引擎服务的互联网公司，于2000年1月1日由李彦宏、徐勇两人创立于北京中关村。名称中的“百度”二字源自中国南宋词人辛弃疾的《青玉案·元夕》的一句词：“众里寻他千百度，蓦然回首，那人却在，灯火阑珊处”，企业标志则是一个“熊掌”，来自于“猎人以熊掌来寻迹”的意象。</p>
-                    </div>
-                    {% for item in context %}
-                    <div class="result-item">
-                        <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
-                        <span>{{ item.url }}</span>
-                        <p class="result-item-summary">{{ item.summary }}</p>
-                    </div>
-                    {% endfor %}
+                    {% if results %}
+                        {% for item in results %}
+                        <div class="result-item">
+                            <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+                            <span>{{ item.url }}</span>
+                            <p class="result-item-summary">{{ item.summary }}</p>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <h2>No Contents found.</h2>
+                    {% endif %}
                 </div>
             </div>
         </div>
