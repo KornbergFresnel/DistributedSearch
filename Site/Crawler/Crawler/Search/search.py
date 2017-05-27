@@ -59,6 +59,10 @@ class SearchIndex:
         print("Adding item url %s to our search engine" % item['url'])
         self.conn.index({"content": item['content'], "title": item['title'], "url": item['url'], "link": 0}, SEARCH_INDEX, DOC_TYPE)
 
+    def finish_index(self, item):
+        self.conn.default_indices = [SEARCH_INDEX]
+        self.conn.refresh()  # refresh es
+
 
 # search function
 def search_request(search_text, up_page=0):
