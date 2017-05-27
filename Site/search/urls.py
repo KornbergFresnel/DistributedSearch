@@ -20,4 +20,5 @@ app_name = 'search'
 
 urlpatterns = [
     url(r'^$', views.index, name='main'),    # main page
+    url(r'^result/$', views.search, name='result')
 ]
