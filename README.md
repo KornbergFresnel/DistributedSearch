@@ -2,6 +2,13 @@
 
 > this is a distributed mainly based on Elasticsearch and Scrapy, implemented with python3
 
+## What you need in your python3
+
+1. django1.9.5+
+2. pyes
+
+all above these you can use `pip3 install [library name]` to download and install
+
 ## About Distributed Crawler
 
 > we need focus on how to deal with relative links and how to avoid the loop links
