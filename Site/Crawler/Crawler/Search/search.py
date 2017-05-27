@@ -2,7 +2,7 @@ from pyes import *
 from pyes.mappings import *
 
 
-SEARCH_INDEX = "search_index"
+SEARCH_INDEX = "dspider"
 DOC_TYPE = "search_engine"
 PAGE_SIZE = 15
 
@@ -61,7 +61,7 @@ class SearchIndex:
 
 
 # search function
-def search_request(search_text, up_page):
+def search_request(search_text, up_page=0):
     conn = ES("xulight.cn:9200", timeout=20)
     q_title = MatchQuery("title", search_text)
     q_content = MatchQuery("content", search_text)
