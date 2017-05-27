@@ -38,3 +38,4 @@ class CrawlerPipeline(object):
 
     def __del__(self):
         self.storage.close()
+        self.searchIndex.finish_index()
