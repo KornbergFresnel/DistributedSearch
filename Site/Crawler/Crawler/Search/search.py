@@ -87,8 +87,8 @@ def search_request(search_text, up_page=0):
         # if item._meta.hightlight.in("content"):
             # item['content'] = item._meta.highlight[u'content'][0]
         ret = Item()
-        ret.title = item['title']
-        ret.content = item['content']
+        ret.title = item['title'].encode().decode('utf-8')
+        ret.content = item['content'].encode().decode('utf-8')
         ret.url = item['url']
         ret_list.append(ret)
     return ret_list
