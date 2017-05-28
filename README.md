@@ -2,7 +2,7 @@
 
 > this is a distributed mainly based on Elasticsearch and Scrapy, implemented with python3
 
-## What you need in your python3
+## What you need in your python3
 
 1. django1.9.5+
 2. pyes
