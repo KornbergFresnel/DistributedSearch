@@ -6,6 +6,8 @@
 
 1. django1.9.5+
 2. pyes
+3. pybloomfiltermmap3
+4. scrapy
 
 all above these you can use `pip3 install [library name]` to download and install
 
