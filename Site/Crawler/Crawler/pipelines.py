@@ -11,10 +11,10 @@
 # 4. storing the scraped item in a database
 import json
 from scrapy import signals
-from pybloomfilter import BloomFilter
+# from pybloomfilter import BloomFilter
 from . import settings
 from scrapy.exceptions import DropItem
-from ..Search import search
+from Crawler.Search import search
 
 
 class CrawlerPipeline(object):
@@ -27,11 +27,11 @@ class CrawlerPipeline(object):
         self.searchIndex.init_mapping()
 
     def process_item(self, item, spider):
-        # if self.filter.add(item['url']):
-        #     raise DropItem("Duplicated item founded: %s" % item['url'])
-        # else:
-        #     self.storage.write(str(item) + '\n')
-        #     return item
+        if self.filter.add(item['url']):
+            raise DropItem("Duplicated item founded: %s" % item['url'])
+        else:
+            self.storage.write(str(item) + '\n')
+            return item
         self.storage.writes(str(item) + '\n')
         self.searchIndex.add_item(item)
         return item
