@@ -3,7 +3,7 @@ from .forms import SearchForm
 from .models import SearchItem
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
-import Crawler.Crawler.Search.search as Search
+from elasticinterface import search_request
 import datetime
 
 
@@ -20,5 +20,5 @@ def search(request):
     if 'q' in request.GET:
         q = request.GET['q']
         # results = SearchItem.objects.all()
-        results = Search.search_request(q)
+        results = search_request(q)
         return render(request, 'search/result.html', {'results': results, 'query': q})

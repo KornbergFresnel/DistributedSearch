@@ -5,9 +5,7 @@ This file designs a spider for search-engine
 import scrapy
 import queue
 import re
-# from .. import settings
 from urllib.parse import urlparse
-# from ..execute import pretask
 from scrapy import signals
 from scrapy.selector import HtmlXPathSelector
 from Crawler.items import CrawlerItem
