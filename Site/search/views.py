@@ -3,7 +3,7 @@ from .forms import SearchForm
 from .models import SearchItem
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
-from elasticinterface import search_request
+from .elasticinterface import search_request
 import datetime
 
 
