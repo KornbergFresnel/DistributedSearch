@@ -48,6 +48,7 @@ class DistributedSpider(RedisCrawlSpider):
         item['content'] = ''
         for ele in tmpContent:
             item['content'] += ele.strip() + ' '
+        item['content'] = item['content'][:116]
 
-        yield {'url': response.url, 'name': response.css('title::text').extract_first()}
+        yield {'url': item['url'], 'name': item['title']}
         return item
