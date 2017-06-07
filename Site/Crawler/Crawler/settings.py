@@ -33,7 +33,7 @@ ROBOTSTXT_OBEY = True
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 2  # time slot
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -113,8 +113,18 @@ DEPTH_LIMIT = 2
 # 调度状态持久化，不清理redis缓存，允许暂停/启动爬虫
 SCHEDULER_PERSIST = True
 RETRY_TIMES = 1
-DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"  # filter the duplicate url request
 SCHEDULER = "scrapy_redis.scheduler.Scheduler"
 DOWNLOAD_TIMEOUT = 10
+
+# redis client setting for master, if your machine is a master, please uncomment this part
+#REDIS_HOST = 'xulight.cn'
+#REDIS_PORT = 6379
+
+# redis client settting for slave, if your machine is a slave, please uncomment this part
+#REDIS_URL = 'redis://xulight.cn:6379'
+
+# When you wanna publish your app, uncomment this arg
+#LOG_LEVEL = 'INFO'
 
 # Ignore file extensions setting
