@@ -80,12 +80,12 @@ def search_request(search_text, up_page=0):
     ret_list = []
     for item in resultset:
         # has_key() is deprecated, use 'in'
-        # if item._meta.highlight.has_key("title"):
+        if item._meta.highlight.has_key("title"):
         # if item._meta.highlight.in("title"):
-            # item['title'] = item._meta.highlight[u'title'][0]
-        # if item._meta.highlight.has_key("content"):
+            item['title'] = item._meta.highlight['title'][0]
+        if item._meta.highlight.has_key("content"):
         # if item._meta.hightlight.in("content"):
-            # item['content'] = item._meta.highlight[u'content'][0]
+            item['content'] = item._meta.highlight['content'][0]
         ret = Item()
         ret.title = item['title'].encode().decode('utf-8')
         ret.content = item['content'].encode().decode('utf-8')
