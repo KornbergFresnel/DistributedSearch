@@ -18,11 +18,11 @@ from Crawler.Search import search
 
 
 class CrawlerPipeline(object):
+    """This pipeline class object is designed for ElasticSearch client
+    """
     def __init__(self):
-        """Initialize the BloomFilter tool
-        """
         # self.filter = BloomFilter(100000000, 0.01, 'filter.bloom')
-        self.storage = open(settings.TMP_STORAGE_FILE, 'w')
+        # self.storage = open(settings.TMP_STORAGE_FILE, 'w')
         self.searchIndex = search.SearchIndex()
         self.searchIndex.init_mapping()
 
@@ -37,5 +37,5 @@ class CrawlerPipeline(object):
         return item
 
     def __del__(self):
-        self.storage.close()
+        # self.storage.close()
         self.searchIndex.finish_index()
