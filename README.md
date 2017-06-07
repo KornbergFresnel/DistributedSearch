@@ -39,3 +39,13 @@ I proposed a naive method (so that we can advance it in the future):
 > This part will introduce for installing python, redis and so on for Centos6.8, something different with other system version also will be noted in this part. 
 
 **How to install python3 at Centos**
+
+**If your machine is a master, notice**
+
+1. modify `setting.py`: master should set this file with `REDIS_HOST=[your host ip or domain] REDIS_PORT=[your redis port]`
+2. Master should run this django project, unlike *Slave Machine*, they just need run `Clawer` part
+
+**If your machine is a slave, notice**
+
+1. modify `setting.py`: slave should set this file with `REDIS_URL=[your master's redis url and port, like: redis://host_ip:port]`
+2. Slave just need run `Crawler` part
